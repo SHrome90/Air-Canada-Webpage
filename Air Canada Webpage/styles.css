@@ -1,0 +1,1039 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  background-image: URL(https://assets.skiesmag.com/wp-content/uploads/2022/12/Air_Canada_Air_Canada_Named_Best_Airline_in_North_America_for_Fo-e1677763649500.jpg);
+  background-repeat: no-repeat;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/*
+=============== 
+Navbar
+===============
+*/
+nav {
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+  position: fixed;
+  width: 100%;
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-primary-5);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: var(--clr-primary-1);
+  transform: rotate(90deg);
+}
+.logo {
+  height: 40px;
+  margin-left: -20%;
+}
+.links a {
+  color: var(--clr-grey-3);
+  font-size: 20px;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.links a:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding-left: 1.5rem;
+}
+.social-icons {
+  display: none;
+}
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 10rem;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  
+  }
+
+  nav {
+    z-index: 99;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .social-icons {
+    display: flex;
+  }
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: var(--clr-primary-5);
+    transition: var(--transition);
+  }
+  .social-icons a:hover {
+    color: var(--clr-primary-7);
+  }
+}
+/*code added subsequently*/
+.dropdown {
+    position: relative;
+    display: inline-table;
+    margin: 20px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #aaa79e;
+    box-shadow: 0 8px 16px rgb(255,225,189);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: rgb(0, 0, 0);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .font-swap  {
+    font-family: 'Courier New', monospace;
+    font-size: 100px;
+  }
+
+  .btn-color {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: var(--spacing);
+    color: black;
+  }
+  .btn-color:hover {
+    color: black;
+    border-bottom: 3px solid white;
+    transition:  0.1s ease;
+  }
+  .btn-color:active {
+    color: black;
+    transition: none;
+  }
+
+  
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/*
+=============== 
+Reviews
+===============
+*/
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.underline {
+  height: 0.25rem;
+  width: 5rem;
+  background: var(--clr-primary-5);
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  width: 80vw;
+  max-width: var(--fixed-width);
+}
+.review {
+  background: var(--clr-white);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+.review:hover {
+  box-shadow: var(--dark-shadow);
+}
+.img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  
+}
+#person-img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+.img-container::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f10e";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+}
+.img-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--clr-primary-5);
+  position: absolute;
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+}
+#author {
+  margin-bottom: 0.25rem;
+}
+#job {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: var(--clr-primary-5);
+  font-size: 0.85rem;
+}
+#info {
+  margin-bottom: 0.75rem;
+}
+.prev-btn,
+.next-btn {
+  color: var(--clr-primary-7);
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  color: var(--clr-primary-5);
+}
+.random-btn {
+  margin-top: 0.5rem;
+  background: var(--clr-primary-10);
+  color: var(--clr-primary-5);
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  border-color: var(--clr-primary-5);
+  cursor: pointer;
+}
+.random-btn:hover {
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+}
+
+.primero, .ultimo {
+  margin-top: 0.5rem;
+  background: var(--clr-primary-10);
+  color: var(--clr-primary-5);
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  border-color: var(--clr-primary-5);
+  cursor: pointer;
+}
+
+.primero:hover {
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+}
+
+.ultimo:hover {
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+}
+
+.web-color {
+  margin-top: 0.5rem;
+  background: var(--clr-primary-10);
+  color: var(--clr-primary-5);
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  border-color: var(--clr-primary-5);
+  cursor: pointer;
+}
+.web-color:hover {
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+}
+
+.btn-up {
+  float: right;
+  margin-top: -175px;
+  margin-right: 80px;
+} 
+
+.btn-down {
+  float: right;
+  margin-top: -175px;
+  margin-right: 10px;
+}
+
+.btn-sync {
+  float: right;
+  margin-top: -175px;
+  margin-right: 45px;
+}
+
+.rating-container {
+  float: left;
+  margin-top: -230px;
+
+}
+
+.rating {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: black;
+  margin-right: 4px;
+}
+
+.count {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: -20px;
+  color: black;
+}
+.count.positive {
+  color: green;
+}
+.count.negative {
+  color: rgb(255, 0, 0);
+}
+
+
+.btn-up2 {
+  float: right;
+  margin-top: -360px;
+  margin-right: 80px;
+} 
+
+.btn-down2 {
+  float: right;
+  margin-top: -360px;
+  margin-right: 10px;
+}
+
+.btn-sync2 {
+  float: right;
+  margin-top: -360px;
+  margin-right: 45px;
+}
+
+.rating-container2 {
+  float: left;
+  margin-top: -417px;
+
+}
+
+footer{
+  background-color: 	#D22B2B;
+}
+.foooterContainer {
+  width: 100%;
+  padding: 70px 30x 20px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+}
+.socialIcons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.socialIcons a i{
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;    
+}
+
+/*Hover effect on Social Media Icons*/
+
+.socialIcons a:hover{
+  background-color: #111;
+  transition: 0.5s;
+  
+}
+.socialIcons a:hover i{
+  color: white;
+  transition: 0.5s;
+}
+
+
+.footerNav {
+  margin: 30px 0;
+}
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+}
+
+.footerNav ul li a{
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footerNav ul li a:hover{
+  opacity: 1;
+}
+
+.footerBottom {
+  background-color: #880808;
+  padding: 20px;
+  text-align: center;
+    
+}
+
+.footerBottom p{
+  color: white;
+}
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px; 
+}
+
+/*Effects on and the addition of media*/
+.staring {
+  width: 450px;
+  opacity: 50%;
+}
+.staring:hover{
+  opacity: 100%;
+}
+.item2 {
+  grid-area: menu;
+  background: red;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: sticky;
+  top: 0;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+}
+
+.quote {
+  width: 450px;
+  opacity: 50%;
+}
+
+.quote:hover {
+  opacity: 100%;
+}
+    
+.whiteboard {
+  width: 450px;
+  opacity: 50%;
+  }
+.whiteboard:hover {
+  opacity: 100%;
+}
+
+.arrow {
+  color: #fff;
+}
+
+.video {
+  width: 450px;
+  opacity: 50%;
+}
+
+.video:hover {
+  opacity: 100%;
+}
+
+.wrapper { 
+  display: flex;
+  position: relative;
+  height: 111.85%;   /*this percentage was used to align the sidebar grid to the footer grid*/
+}
+.wrapper .sidebar {
+  width: 200px;
+  height: 100%;
+  padding: 30px 0;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.wrapper .sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0,.05);
+  border-top: 1px solid rgba(225,225,225,0,0.05);
+}
+
+.wrapper .sidebar ul li a{
+  color: #fff;
+  display: block;
+}
+.wrapper .sidebar ul li a .fas{
+  width: 50px;
+}
+.wrapper .sidebar ul li:hover{
+  background: #A0A0A0;
+}
+
+.footer {
+  font-size: 1.0em;
+}
+
+.footer a{
+  text-decoration: none;
+  color: grey;
+}
+/*When user hovers over the text "for more information visit Space.com", the text appears brighter to demonstrate a link is being clicked*/
+.footer a:hover {
+  color: white;
+}
+
+.paragraph1 {
+  font-size: 34.57px;
+}
+
+/*Animation made with help of youtube*/
+.contain-text {
+  position: relative;
+  margin: 125px auto;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  box-shadow: rgba(0,0,0,0.2) 0px 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 4px;
+  width: 300px;
+  height: 60px;
+}
+
+.contain-animations {
+  position: relative;
+  z-index: 5;
+  margin: 125px auto;
+  width: 300px;
+}
+
+.fa-plane {
+  position: absolute;
+  z-index: 6;
+  top: 6px;
+  left: 3px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  font-size: 42px;
+  color: white;
+}
+
+.base {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 3;
+  background: #ed6e46;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.mode {
+  margin-left: 65px;
+  line-height: 60px;
+  font-size: 18px;
+  color: #333333;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  position: absolute;
+  top: 12px;
+  left: 200px;
+  z-index: 2;
+  border-radius: 50px;
+  background-color: gray;
+  width: 90px;
+  height: 38px;
+  cursor: pointer; 
+}
+
+label:after {
+  display: block;
+  margin-top: -3px;
+  margin-left: -1px;
+  background-color: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 50%;
+  box-shadow: gray 1px 2px 5px;
+  width: 40px;
+  height: 40px;
+  content:'';
+}
+
+input:checked ~ .base .fa-plane  {
+  -webkit-animation: take-off 2s forwards;
+  animation: take-off 2s forwards;
+}
+
+input:checked + label:after {
+  -webkit-animation: slide 1s forwards;
+  animation: slide 1s forwards;
+}
+
+input:checked + label {
+  -webkit-animation: on 2s forwards;
+  animation: on 2s forwards;
+}
+
+div:focus {
+  outline: none;
+}
+
+div:focus input:not(:checked) ~ .base .fa-plane {
+  -webkit-animation: off-plane 1s forwards;
+  animation: off-plane 1s forwards;
+}
+
+@-webkit-keyframes slide {
+  to {
+    -webkit-transform: translateX(50px);
+  }
+}
+
+@-webkit-keyframes on {
+  to {
+    background: #f8b65b;
+  }
+}
+
+@-webkit-keyframes take-off {
+  to {
+    -webkit-transform: translateX(100px) rotate(45deg);
+  }
+}
+
+@-webkit-keyframes off-plane {
+  from {
+    -webkit-transform: translateY(0) translateX(-60px) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translateY(0) translateX(0) rotate(45deg);
+  }
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(50px);
+  }
+}
+
+@keyframes on {
+  to {
+    background: #f8b65b;
+  }
+}
+
+@keyframes take-off {
+  to {
+    transform: translateX(100px) rotate(45deg);
+  }
+}
+
+@keyframes off-plane {
+  from {
+    transform: translateY(0) translateX(-60px) rotate(45deg);
+  }
+  to {
+    transform: translateY(0) translateX(0) rotate(45deg);
+  }
+}

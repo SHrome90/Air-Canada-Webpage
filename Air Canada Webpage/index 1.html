@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <!--font-awesome -->
+    <link
+      rel="stylesheet"
+    />
+
+    <!--styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="./2560px-Air_Canada_Logo.svg.png" class="logo" alt="logo" />
+          <button class="nav-toggle">
+            <i class="fa-solid fa-plane"></i>
+          </button>
+        </div>
+        <!--links -->
+        <div class="links">
+            <div class="dropdown">
+             <!--the addition of dropdown menu to access subcategories for Home section-->
+              <a class= "font-swap" href="" onclick="toggleDropdown('dropdown1')">Home</a>
+              <div id="dropdown1" class="dropdown-content">
+                  <a href="#">Info</a>
+                  <a href="#">Gallery</a>
+                  <a href="#">products</a>
+              </div>
+          </div>
+          <!--Modification for the subcategories dropdown menu through existing anchor elements-->
+          <!--Sources are friends and w3 school hover dropdown section-->
+          <div class="dropdown">
+           <!--the addition of dropdown menu to access subcategories for About section-->
+              <a class= "font-swap" href="" onclick="toggleDropdown('dropdown2')">About</a>
+              <div id="dropdown2" class="dropdown-content">
+                  <a href="#">How it started</a>
+                  <a href="#">Goals</a>
+                  <a href="#">Looking ahead</a>
+              </div>
+          </div>
+          
+          <div class="dropdown">
+            <!--the addition of dropdown menu to access subcategories for Projects section-->
+              <a class= "font-swap" href="" onclick="toggleDropdown('dropdown3')">Projects</a>
+              <div id="dropdown3" class="dropdown-content">
+                  <a href="#">Achievements</a>
+                  <a href="#">Employees</a>
+                  <a href="#">Production Walkthrough</a>
+              </div>
+          </div>
+  
+          <div class="dropdown">
+             <!--the addition of dropdown menu to access subcategories for Contacts section-->
+            <a class= "font-swap" href="" onclick="toggleDropdown('dropdown4')">Contacts</a>
+            <div id="dropdown4" class="dropdown-content">
+                <a href="#">Address</a>
+                <a href="#">Description</a>
+            </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn-color" onclick="changeColors()">Change Color</button>
+        </div>
+  
+        </div>
+        <!--social media -->
+        <ul class="social-icons">
+
+          <li>
+            <a href="https://www.linkedin.com/company/air-canada/?originalSubdomain=ca" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/AirCanada?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+
+            <a href="https://www.instagram.com/aircanada/?hl=en" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.facebook.com/aircanada/" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.reddit.com/r/aircanada/" target="_blank">
+              <i class="fab fa-reddit"></i>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+     <main>
+        <section class="container">
+          <!-- title -->
+          <div class="title">
+            <h2>AIRLINE REVIEWS</h2>
+            <div class="underline"></div>
+          </div>
+          <!-- review -->
+          <article class="review">
+            <div class="img-container">
+              <img src="person-1.jpeg" id="person-img" alt="" />
+            </div>
+            <h4 id="author">sara jones</h4>
+            <p id="job">ux designer</p>
+            <p id="info">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              asperiores debitis incidunt, eius earum ipsam cupiditate libero?
+              Iste, doloremque nihil?
+            </p>
+            <!-- prev next buttons-->
+            <div class="button-container">
+              <button class="prev-btn">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="next-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+            <!-- random buttons -->
+            <button class="random-btn">surprise me</button>
+            <button class="primero">first review</button>
+            <button class="ultimo">last review</button>
+          </article>
+        </section>
+      </main>
+      
+
+     <main>
+        <section class="container">
+          <!-- title -->
+          <div class="title">
+            <h2>FUN FACTS</h2>
+            <div class="underline"></div>
+          </div>
+          <!-- review -->
+          <article class="review">
+            <h4 id="author">FUN FACTS ABOUT AIR CANADA</h4>
+            <p id="info"><li>
+              During the 2010 Olympic Hockey Final, Air Canada had to reschedule a flight because the passengers were watching the game. As the airplane sat on the tarmac, the match Canada and the United States were squaring it out for gold, and the passengers did not want to miss it. They watched the game from the airport lounge screens and ignored the airline staff instructions to board the plane.
+            </li>
+            <br></br>
+            <li>
+              1983, an Air Canada airplane was traveling to Edmonton before the pilot realized they had run out of fuel midway through the flight. Popularly referred to as Gimli Glider, Air Canada Flight 143 was about 41,000 feet (12,500) in the sky before tragedy hit. Miraculously, the pilots touched down safely, and all the 69 people on board survived. Other pilots have tried to repeat the feat in simulation, but none has succeeded so far.
+            </li>
+            <!--button 1,2,3-->
+            <div class="buttons"></div>
+            <button class="btn-up" onclick="like('fact1')"><i id="thumbup" class="fa-regular fa-thumbs-up"></i></button>
+            <button class="btn-down" onclick="dislike('fact1')"><i id="thumbdown" class="fa-regular fa-thumbs-down"></i></button>
+            <button class="btn-sync" onclick="reset('fact1')"><i id="sync" class="fas fa-sync"></i></button>
+
+            <button class="btn-up2" onclick="like('fact2')"><i id="thumbup" class="fa-regular fa-thumbs-up"></i></button>
+            <button class="btn-down2" onclick="dislike('fact2')"><i id="thumbdown" class="fa-regular fa-thumbs-down"></i></button>
+            <button class="btn-sync2" onclick="reset('fact2')"><i id="sync" class="fas fa-sync"></i></button>
+            </div>
+            </p>
+            <div class="rating-container">
+              <p class="rating"><u>Rating:</u></p><div class="count" id="count1">0</div>
+              </div>
+              <div class="rating-container2">
+                <p class="rating"><u>Rating:</u></p><div class="count" id="count2">0</div>
+            </div>
+          </article>
+        </section>
+      </main>
+      <!--code for animation air plane-->
+      <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+      <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+      
+      <div class="contain-animations" tabindex="-1">
+        <input type="checkbox" id="toggle" /> 
+        <label for="toggle"></label>
+        <span class="base">
+          <i class="fa fa-plane"></i>
+        </span>
+      </div>
+      
+      <div class="contain-text">
+        <span class="mode">Airplane Mode</span>
+      </div>
+
+     <!--Footer-->
+      <div class="item5">
+        <body>
+        <footer>
+          <div class="footerContainer">
+          <div class="socialIcons">
+            <a href="" ><i class="fa-brands fa-facebook"></i></a> 
+             <a href=""><i class="fa-brands fa-instagram"></i></a>     
+             <a href=""><i class="fa-brands fa-youtube"></i></a>     
+             <a href=""><i class="fa-brands fa-google-plus"></i></a>     
+             <a href=""><i class="fa-brands fa-twitter"></i></a>     
+       </div>
+          <div class="footerNav" id="address">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">News</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">Our Team</a></li>
+            </ul>
+          </div>
+          </div>
+          <div class="footerBottom">
+            <p>Copyright &copy;2024; Designed by <span class="designer">Shrome</p>
+            <p>Montréal, 7373 Blvd. de la Côte-Vertu, Saint-Laurent, Canada</p>
+            <div class="footer">
+            <p><a href="https://www.aircanada.com/ca/en/aco/home.html" target="_blank" id="Add-info">For more information visit aircanada.com</a></p>
+          </div>
+       </div>    
+        </footer>  
+      </div>
+      </div>
+      </body>
+      </html>
+
+      
+    <!--javascript -->
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/c9be6d17d0.js" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<!--https://www.w3schools.com/howto/howto_css_dropdown.asp-->
+
+
